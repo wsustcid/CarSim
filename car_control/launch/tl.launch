@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="car_control" name="talker_pub" type="talker.py">
+        <remap from="chatter" to="remap_chatter"/>
+
+    </node>
+
+    <node pkg="car_control" name="listener_sub" type="listener.py">
+        <remap from="chatter" to="remap_chatter"/>
+
+    </node>
+</launch>
